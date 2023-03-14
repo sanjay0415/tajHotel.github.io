@@ -1,0 +1,163 @@
+Video - 2:------------------------------------------------------------------------
+
+->first create a folder in htdocs present inside xammp
+->create 'index.php'
+->visit bootstrap-5 and copy css and js scripts
+->visit google fonts and copy paste inside style tag
+
+              NAVBAR [HEADER]
+->we copy navbar from BS and do following changes
+->in anchor link of 'TAJ Hotel' we are keeping 'index.php' file in href
+  [navbar-brand me-5 fs-3 fw-bold h-font] me-margin end, fs-font size, fw-font weight
+->in nav tag
+  [bg-white px-lg-3 py-lg-2 shadow-sm sticky-top] px-padding X direction, lg-large Devices
+->we are copying 'Button trigger modal' and editing as {data-bs-target="#loginModal"}paste it in navbar area for'LOGIN'
+->we are copying 'Modal', as we have changed in '{data-bs-target="#loginModal"}' in {'Button trigger modal'} so here we are giving id as {'id="loginModal"'} in div Modal.
+->Now in 'Button trigger modal'
+  [outline-dark shadow-none me-lg-3 me-3]
+->Do necessary changes in Modal
+->Copy BS icons link and paste it in css link part [modal head]
+->in modal H5 div use css icon link [modal head]
+->now copy email part from forms of BS and paste in [modal body]
+->create area for mail, password and LOGIN similary in MODAL part
+->copy button of login and edit same for 'register'
+  [data-bs-target="#registerModal"]
+->copy 'modal' of login and edit same for 'modal' of register only change 'id' name
+->in 'modal dailog' - modal-lg is given to show largel modal in pc screen
+  [div class="modal-dialog modal-lg">]
+->CREATE FORM BELOW class MODEL CONTENT
+->adding badges from BS inside 'modal' body [register part]
+->inside 'modal' body after badges create div and create new div for name, email, etc
+->USE MODAL INSIDE THAT CREATE FORM AND TAKE NECESSARY INFORMATION [REGISTER PART]
+->for hiding arrow marks in input type="number", search in google and paste it inside style tage
+
+                  CAROSEL [SWIPER JS]
+->copy swiper.js css and script tag to 'index.php'
+->click "ctrl+u" to look for src code of that effec (effect-fade inside demos)
+->copy that carousel html inside body and script code below swiper js script tag
+
+                  Check availability form
+->create div and class container
+->using col of total 12 equally create various part such as check-in, check-out etc
+->by using class 'availability-form' in main div for this part we will do some css part
+
+                  Our Rooms area
+->create div and class container
+->inside above div create 2 div's one for room cards and more rooms
+->copy card from BS and do necessary changes for features and facilities
+->do copy of these cards 3 times
+
+                 Our Facility area
+->here we create h5 component
+->we create varios div for different facilities
+
+                 Testimonials
+->here we create h5 component
+->create div of class container and paste swiper js html inside this (effect-coverflow)
+
+                 Reach us
+->here we create h5 component
+->create div of class container and inside that class row and then again create 2 for map(go google maps->share map->embedded map->medium size->copy->alter as you want) and phone number 
+->we create our social handle here
+
+                 Footer part
+->create div of class container, we will write some info and paste links, etc
+
+
+
+
+
+
+
+
+
+VIDEO - 3--------------------------------------------------------------------------------
+
+->create a separate php file for navbar, Footer and links so that we can use easily for multiple pages 
+->create facilities.php page as we work on facilities page
+->copy the same code as for facilities.php page
+->delete all the part in in 'facilities.php' page except navbar and Footer
+->create 1st div heading "Facilities"
+->create 2nd div for facilities items and its boxes
+->create a class named as 'pop' in the facilities card or box for hovering
+->inside head tag use style tag and edit it for hovering (good tecnic)
+->make same copies of this
+
+                  About page 
+->copy everything from facilities page
+->copy the same code as for facilities.php page
+->delete all the part in in 'facilities.php' page except navbar, Footer and first div part
+->create div container
+->play with 'order', order-1 means the given data comes first and order-2 means the given data comes next, order-lg-1 means, order in large devices.
+
+                management team 
+->create div and class container
+->add swiper js and copy 'pagination' and edit it to the according
+
+
+
+
+
+
+
+
+VIDEO - 4--------------------------------------------------------------------------------
+
+->CONTACT US page
+->copy everything from facilities.php page and delete everything except navbar, footer and starting 2 divs, for google map address and send message part
+->copy google map, phone number part from index.php page
+->in mail part create anchor tag inside that href write as "mailto: tajHotelWebdev@gmail.com", here 'mailto' automatically opens mail page with sender address
+->copy follow us part from index.php and keep only icons here
+->In send message part copy email part from header.php in login part and edit it for name, mail etc and copy textarea for message and also copy button and edit it.
+
+
+
+
+
+VIDEO - 5--------------------------------------------------------------------------------
+
+->ROOMS page
+->creat div and class container, and inside that create div and class row
+->copying navbar from BS with toggle option
+->"navbar-expand-lg" this keeps as 'navbar' in large devices whereas if we remove this than it will be showed as toggle option as shown in mobile or small devices (3 line symbol)
+->data-bs-target and id of next div should be same for opening content of div when we click on filter.
+->delete all the items in navbar such as home about everything and edit as check availability as needed
+->copy above availability part and delete all check-in etc and keep as input and label
+->important this is that the "id" given input should be same as "for" given in label
+->now we look at 2nd part of screen which is divided into 3 parts which is photo, simple room name and price
+->simpe room name col consist of Facility, features and guest part copied form index.php
+->copy these cards 3 times
+
+
+
+
+
+
+
+VIDEO - 6--------------------------------------------------------------------------------
+->admin panel login backend
+->we will see Functional Coding, Prepared Statements, Slat Operator, Dynamic Queries, Data Filtration, Sessions and a lot more
+->create div inside that create form and take name password and login
+->give "name" for each above input as "name" is important for fetching data from backend database
+
+                             database part
+->create a database "hotelproject", create table inside that as "admin_cred"
+->create row as "sr_no", "admin_name", "admin_pass"
+->create "db_config.php" file inside "inc" inside "admin" folder, where inside this file we do about connecting to the database
+->we are writing "required" inside input tag which means data must be given cumpolsarily
+->in "form" tag data is send in "POST" method as we are sending sensitive data
+->creating backend for above Admin login Panel form
+->"isset" - function returns true if the variable exists and is not NULL, otherwise it returns false
+->creating function fitration in "db_config.php" (this function is done bcoz when data is sent in POST method it is sent in form of arrays which contains whitespace, commas, colon, etc  to remove this we use function in filtration function) 
+->now for checking queries and values valid or not use function "select" created in db_config.php, this function takes 3 parameters such as "$sql, $values, $datatypes"
+->"mysqli_prepare" - Prepares an SQL statement for execution, "mysqli_stmt_bind_param" - Binds variables to a prepared statement as parameters, "mysqli_stmt_execute" - Executes a prepared statement.
+->now in "index.php" passing queries and values, if queries and values is present inside the database then num_rows become 1
+-> then we do mysqli_fetch_assoc and some Sessions work and redirect to "dashboard.php"
+->create a file "essential.php" for storing small functions, inside this create "redirect" function, where when you give url it directs you to that url
+->if queries and values are nto matched then give as Login Failed - Invalid Credentials
+->for this use alert function created inn essential.php page
+->create "dashboard.php" page and edit as needed
+->create "logout.php" page, when this option is clicked in dashboard.php page we end the Sessions and redirect to index.php page
+->now we will look at adminLogin function inside essential.php, if data is given wrong then redirect to index.php page. 
+->now in "index.php" page if admin login details are given correctly then redirect to "dashboard.php"
+->now keep actual "adminLogin" function in page "dashboard.php"
